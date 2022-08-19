@@ -21,12 +21,12 @@ with serial.Serial('COM6', 9600) as serArd:
             print(serArd.readline())
             rec_time = datetime.now().strftime('%H:%M:%S.%f')
             myData = serArd.readline().decode().rstrip()
-            disData = (int(myData) * 10**-6) * speed_of_sound
+            disData = ((int(myData) * 10**-6) * speed_of_sound) * 100
             try:
                 myData = float(myData)
-                print(f"raw data at {rec_time} : {myData}")
-                print(f"distance (m) at {rec_time} : {disData}")
+                print(f"at time {rec_time} : {myData}")
+                print(f"distance at {rec_time} : {disData}", "cm")
             except:
                 print("No data")
-            except KeyboardInterrupt:
-                sys.exit(0)
+            # except KeyboardInterrupt:
+            #     sys.exit(0)
