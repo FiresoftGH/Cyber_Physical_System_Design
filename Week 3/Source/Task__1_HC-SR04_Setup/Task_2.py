@@ -6,7 +6,7 @@ import keyboard
 import sys
 
 SampleTime = '500' # In milliseconds
-speed_of_sound = 211 # Speed of sound m/s
+speed_of_sound = 211 # Speed of sound in m/s calculated.
 
 with serial.Serial('COM6', 9600) as serArd:
     print(f"Arduino board is connect through {serArd.port}")
@@ -16,6 +16,7 @@ with serial.Serial('COM6', 9600) as serArd:
     if (serArd.writable()):
         serArd.write(SampleTime.encode())
         print(serArd.readline().decode().rstrip())
+
     while not keyboard.is_pressed('q'):
         if (serArd.inWaiting() > 0):
             print(serArd.readline())
@@ -28,5 +29,3 @@ with serial.Serial('COM6', 9600) as serArd:
                 print(f"distance at {rec_time} : {disData}", "cm")
             except:
                 print("No data")
-            # except KeyboardInterrupt:
-            #     sys.exit(0)
