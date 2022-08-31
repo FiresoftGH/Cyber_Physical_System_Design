@@ -18,7 +18,7 @@ SampleTime = '500' # In milliseconds
 speed_of_sound = 422 # Speed of sound in m/s calculated.
 index = 0
 
-with serial.Serial('COM7', 9600) as serArd:
+with serial.Serial('COM8', 9600) as serArd:
     print(f"Arduino board is connect through {serArd.port}")
     time.sleep(2)
     serArd.reset_input_buffer()
