@@ -1,0 +1,156 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.35487161437080617 0.03849182682875414 0.9341223242066551 2.895253628118505
+  position 2.120709464182894 -0.5578587268630515 2.103377592319515
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+WoodenBox {
+  translation 0 0.26 0.05
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.24 -0.18 0.05
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.25 -0.25 0.05
+  rotation 0 1 0 0
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  hidden position_0_0 2313.3292115503104
+  hidden position_0_1 1345.1974881695446
+  hidden linearVelocity_0 0.05764315749032775 0.025748867837046625 -3.125244643289994e-05
+  hidden angularVelocity_0 -0.0016341692617375234 0.00032231014654097914 -2.21164290961796
+  hidden rotation_1 0 0.9999999999999999 0 1.1170185082226232
+  hidden linearVelocity_1 0.10995938700476877 0.0491176790529068 -2.4978061475264077e-07
+  hidden angularVelocity_1 -2.5618503767202627 5.735184968704422 -2.2399904804669775
+  hidden rotation_2 0 1 0 0.5958324331131072
+  hidden linearVelocity_2 0.005040568361607379 0.002350638747516326 1.6983953907096219e-06
+  hidden angularVelocity_2 -0.0017857991394620233 0.0002526148505939967 -2.2115246336041077
+  translation -0.3431285158448734 0.0494122914671341 -4.317107251102653e-05
+  rotation 0.0020635178941978654 -0.004639808183913582 -0.999987106953843 -0.3958722654897633
+  controller "e-puck_avoid_collision"
+}
+Floor {
+  size 1 1
+}
+Solid {
+  translation -0.355239345940556 0.4256062220043827 0.04958907968033645
+  rotation 0.55083998655029 -0.12700239286806986 -0.8248913270383322 -2.0214153987153294
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+      }
+    }
+  ]
+  name "Ball"
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+  linearVelocity 0.01584974785530473 -0.019279923909838438 9.062573452727993e-12
+  angularVelocity 0.38559847819676873 0.3169949571060946 0.32088759121049215
+}
+Solid {
+  translation 0.16938561356104526 0.2191709760722799 0.04958907968091044
+  rotation -0.2294160620122996 0.07641237648125539 -0.9703243886511641 -2.3748974218801844
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+      }
+    }
+  ]
+  name "Ball(1)"
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+  linearVelocity -0.011733281925545869 0.010913053340470729 2.1283167511348392e-16
+  angularVelocity -0.21826106680941457 -0.23466563851091737 -0.21851631416655332
+}
+Solid {
+  translation 0 0.55 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        metalness 0
+      }
+      geometry DEF WALL_GEOMETRY Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "Wall 1"
+  boundingObject USE WALL_GEOMETRY
+}
+Solid {
+  translation 0 -0.55 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        metalness 0
+      }
+      geometry DEF WALL_GEOMETRY Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "Wall 2"
+  boundingObject USE WALL_GEOMETRY
+}
+Solid {
+  translation -0.55 -2.02023e-06 0.05
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        metalness 0
+      }
+      geometry DEF WALL_GEOMETRY Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "Wall 3"
+  boundingObject USE WALL_GEOMETRY
+}
+Solid {
+  translation 0.55 2.02018e-06 0.05
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        metalness 0
+      }
+      geometry DEF WALL_GEOMETRY Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "Wall 4"
+  boundingObject USE WALL_GEOMETRY
+}
