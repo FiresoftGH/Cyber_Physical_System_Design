@@ -33,8 +33,8 @@ time_drive_1 = 7 * dur_onesq
 time_drive_2 = 9.8 * dur_onesq
 time_drive_3 = 17 * dur_onesq
 time_drive_4 = 19.8 * dur_onesq
-time_drive_5 = 23 * dur_onesq
-time_drive_6 = 25.8 * dur_onesq
+time_drive_5 = 23.2 * dur_onesq
+time_drive_6 = 25.95 * dur_onesq
 time_drive_7 = 28 * dur_onesq
 
 start_time = robot.getTime()
