@@ -7,6 +7,7 @@ dsNames = ['ds_1', 'ds_2']
 for i in range(2):
     ds.append(robot.getDevice(dsNames[i]))
     ds[i].enable(TIME_STEP)
+    
 wheels = []
 wheelsNames = ['wheel_1', 'wheel_2', 'wheel_3', 'wheel_4']
 for i in range(4):

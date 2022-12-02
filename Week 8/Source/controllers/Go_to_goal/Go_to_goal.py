@@ -8,7 +8,7 @@ from math import pi, sin
 robot = Robot()
 
 # get the time step of the current world.
-TIME_STEP = 32
+TIME_STEP = 64
 MAX_SPEED = 6.28 # rad/s
 
 # You should insert a getDevice-like function in order to get the

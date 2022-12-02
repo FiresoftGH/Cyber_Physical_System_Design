@@ -13,7 +13,7 @@ psNames = [
 ]
 
 for i in range(8):
-    ps.append(robot.getDistanceSensor(psNames[i]))
+    ps.append(robot.getDevice(psNames[i]))
     ps[i].enable(TIME_STEP)
     
 leftMotor = robot.getMotor("left wheel motor")
